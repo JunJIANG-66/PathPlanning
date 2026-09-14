@@ -1,1 +1,24 @@
+name: warehouse_01_scenario_001
 
+environment:
+  map: warehouse_01
+
+robot:
+  model: differential_drive
+  radius: 0.25
+
+start:
+  position: [1.0, 1.0]
+  orientation: 0.0
+
+goal:
+  position: [19.0, 19.0]
+  tolerance: 0.2
+
+constraints:
+  max_velocity: 1.0
+  max_acceleration: 0.5
+
+evaluation:
+  collision_check: true
+  compute_clearance: true
