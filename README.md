@@ -1423,13 +1423,13 @@ Ultimately:
                    SCENARIOS
                        │
                        ▼
-                  BENCHMARK
+                   BENCHMARK
                        │
                        ▼
-                 COMPARISON
+                   COMPARISON
                        │
                        ▼
-                  RESEARCH
+                   RESEARCH
 ```
 
 **PathPlanning is intended to become a reproducible and extensible platform for robotic path planning research.**
