@@ -17,7 +17,7 @@ The core philosophy is:
                              │
                              ▼
                     ┌─────────────────┐
-                    │ ENVIRONMENT     │
+                    │   ENVIRONMENT   │
                     │ Collision       │
                     │ Dynamics        │
                     │ Constraints     │
