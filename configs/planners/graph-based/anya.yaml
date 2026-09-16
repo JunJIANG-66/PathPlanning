@@ -1,1 +1,30 @@
+name: anya
+type: graph_based
+
+planner:
+  algorithm: anya
+  heuristic: euclidean
+  any_angle: true
+
+environment:
+  map_type: occupancy_grid
+
+cost:
+  edge_cost: distance
+
+constraints:
+  allow_unknown: false
+
+runtime:
+  max_time: 5.0
+  max_iterations: 100000
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
+  return_search_tree: false
 
