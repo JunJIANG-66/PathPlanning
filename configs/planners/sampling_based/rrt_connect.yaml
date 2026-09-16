@@ -1,1 +1,38 @@
+name: rrt_connect
+type: sampling_based
+
+planner:
+  algorithm: rrt_connect
+
+  step_size: 0.5
+  goal_bias: 0.05
+  max_iterations: 10000
+
+  bidirectional: true
+
+  local_planner:
+    type: straight_line
+    resolution: 0.05
+
+environment:
+  map_type: occupancy_grid
+
+robot:
+  model: point
+  radius: 0.25
+
+constraints:
+  collision_check: true
+
+runtime:
+  max_time: 10.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
+  return_tree: true
 
