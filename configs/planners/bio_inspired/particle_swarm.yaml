@@ -1,1 +1,47 @@
+name: particle_swarm
+type: bio_inspired
+
+planner:
+  algorithm: particle_swarm
+
+  population_size: 50
+  max_iterations: 200
+
+  inertia_weight: 0.7
+  cognitive_weight: 1.5
+  social_weight: 1.5
+
+  velocity:
+    max: 1.0
+
+  representation:
+    type: waypoint_sequence
+    num_waypoints: 50
+
+cost:
+  objective:
+    path_length_weight: 1.0
+    collision_weight: 100.0
+    smoothness_weight: 0.0
+
+environment:
+  map_type: occupancy_grid
+
+robot:
+  model: point
+  radius: 0.25
+
+constraints:
+  collision_check: true
+
+runtime:
+  max_time: 30.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
 
