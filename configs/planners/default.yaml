@@ -1,0 +1,37 @@
+# ============================================================
+# Global default configuration for path planners
+# ============================================================
+
+name: default
+type: generic
+
+planner:
+  algorithm: null
+
+environment:
+  map_type: occupancy_grid
+  connectivity: 8
+
+robot:
+  model: point
+  radius: 0.0
+
+cost:
+  edge_cost: distance
+
+constraints:
+  collision_check: true
+  allow_unknown: false
+
+runtime:
+  max_time: 5.0
+  max_iterations: 100000
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
+  return_search_tree: false
