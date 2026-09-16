@@ -1,1 +1,40 @@
+name: ant_colony
+type: bio_inspired
+
+planner:
+  algorithm: ant_colony
+
+  num_ants: 50
+  max_iterations: 200
+
+  pheromone:
+    initial: 1.0
+    evaporation_rate: 0.5
+    deposit_factor: 1.0
+
+  heuristic:
+    weight: 2.0
+
+  elite:
+    count: 5
+
+cost:
+  edge_cost: distance
+
+environment:
+  map_type: occupancy_grid
+
+constraints:
+  collision_check: true
+
+runtime:
+  max_time: 30.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
 
