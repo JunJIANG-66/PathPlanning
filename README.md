@@ -93,14 +93,49 @@ path-planning/
 │
 ├── configs/
 │   ├── maps/
+│   │   ├── generators/
+│   │   │   ├── random_map.py
+│   │   │   ├── maze.py
+│   │   │   ├── warehouse.py
+│   │   │   ├── indoor.py
+│   │   │   ├── outdoor.py
+│   │   │   ├──procedural.py
+│   │   │ 
+│   │   ├── dynamic_models/
+│   │   │   ├── moving_point.py
+│   │   │   ├── moving_circle.py
+│   │   │   ├── pedestrian.py
+│   │   │   └── predicted_trajectory.py
+│   │   │ 
+│   │   └── loaders/
+│   │   │   ├── image_loader.py
+│   │   │   ├── yaml_loader.py
+│   │   │   └── json_loader.py
+│   │   │ 
 │   ├── planners/
 │   └── experiments/
 │
 ├── data/
 │   ├── maps/
+│   │   │
 │   │   ├── static/
+│   │   │   ├── empty/
+│   │   │   ├── random/
+│   │   │   ├── maze/
+│   │   │   ├── warehouse/
+│   │   │   ├── indoor/
+│   │   │   └── outdoor/
+│   │
 │   │   ├── dynamic/
+│   │   │   ├── simple/
+│   │   │   ├── warehouse/
+│   │   │   ├── indoor/
+│   │   │   └── pedestrian/
+│   │
 │   │   └── time_dependent/
+│   │       ├── temporal_obstacle/
+│   │       ├── time_varying_cost/
+│   │       └── predicted_trajectory/
 │   │
 │   ├── scenarios/
 │   └── datasets/
@@ -134,6 +169,17 @@ path-planning/
 │       │   └── hybrid/
 │       │
 │       ├── metrics/
+│       │   │
+│       │   ├── path_length.py
+│       │   ├── planning_time.py
+│       │   ├── success_rate.py
+│       │   ├── collision_rate.py
+│       │   ├── clearance.py
+│       │   ├── smoothness.py
+│       │   ├── curvature.py
+│       │   ├── energy.py
+│       │   └── computation_cost.py
+│       │
 │       ├── visualization/
 │       ├── simulation/
 │       └── utils/
@@ -154,8 +200,12 @@ path-planning/
 │
 └── results/
     ├── figures/
+    │
     ├── tables/
+    │   └── benchmark.csv
+    │
     └── logs/
+        └── experiment.json
 ```
 
 ---
