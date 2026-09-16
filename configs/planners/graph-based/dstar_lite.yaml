@@ -1,27 +1,32 @@
 name: dstar_lite
-
 type: graph_based
 
 planner:
   algorithm: dstar_lite
-
-  heuristic: manhattan
-
-  allow_diagonal: true
-
-  diagonal_cost: 1.41421356
+  heuristic: octile
+  connectivity: 8
+  replanning: true
 
 environment:
   map_type: dynamic_cost_map
-
-  replanning: true
-
   update_frequency: 10.0
 
-objective:
-  path_length_weight: 1.0
-  obstacle_cost_weight: 1.0
+cost:
+  edge_cost: map_cost
+
+constraints:
+  allow_unknown: false
 
 runtime:
   max_time: 5.0
+  max_iterations: 100000
   max_replans: 100
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
+  return_search_tree: false
