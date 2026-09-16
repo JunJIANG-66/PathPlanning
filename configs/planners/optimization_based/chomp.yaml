@@ -1,1 +1,45 @@
+name: chomp
+type: optimization_based
+
+planner:
+  algorithm: chomp
+
+  num_waypoints: 100
+  iterations: 200
+
+  optimizer:
+    type: gradient_descent
+    learning_rate: 0.01
+
+  objective:
+    smoothness_weight: 1.0
+    obstacle_weight: 1.0
+    dynamics_weight: 0.0
+
+  obstacle:
+    cost_function: signed_distance
+    safety_margin: 0.2
+
+environment:
+  map_type: cost_map
+
+robot:
+  model: point
+  radius: 0.25
+
+constraints:
+  collision_check: true
+  enforce_start: true
+  enforce_goal: true
+
+runtime:
+  max_time: 30.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
 
