@@ -1,1 +1,47 @@
+name: teb
+type: trajectory_based
+
+planner:
+  algorithm: teb
+
+  horizon:
+    duration: 3.0
+    min_samples: 10
+    max_samples: 100
+
+  optimizer:
+    iterations: 50
+
+  objective:
+    time_weight: 1.0
+    obstacle_weight: 1.0
+    velocity_weight: 1.0
+    acceleration_weight: 1.0
+    turning_weight: 0.5
+
+  obstacle:
+    safety_margin: 0.2
+
+environment:
+  map_type: dynamic_cost_map
+  update_frequency: 10.0
+
+robot:
+  model: differential_drive
+  radius: 0.25
+
+constraints:
+  max_velocity: 1.0
+  max_acceleration: 0.5
+  max_angular_velocity: 1.0
+
+runtime:
+  max_time: 5.0
+
+random:
+  seed: 42
+
+output:
+  return_trajectory: true
+  return_statistics: true
 
