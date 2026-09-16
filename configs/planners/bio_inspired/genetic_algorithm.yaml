@@ -1,1 +1,57 @@
+name: genetic_algorithm
+type: bio_inspired
+
+planner:
+  algorithm: genetic_algorithm
+
+  population_size: 100
+  max_iterations: 200
+
+  representation:
+    type: waypoint_sequence
+    num_waypoints: 50
+
+  selection:
+    method: tournament
+    tournament_size: 3
+
+  crossover:
+    method: single_point
+    probability: 0.8
+
+  mutation:
+    method: gaussian
+    probability: 0.1
+    scale: 0.1
+
+  elitism:
+    enabled: true
+    count: 2
+
+cost:
+  objective:
+    path_length_weight: 1.0
+    collision_weight: 100.0
+    smoothness_weight: 0.0
+
+environment:
+  map_type: occupancy_grid
+
+robot:
+  model: point
+  radius: 0.25
+
+constraints:
+  collision_check: true
+
+runtime:
+  max_time: 30.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
 
