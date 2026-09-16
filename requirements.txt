@@ -1,0 +1,14 @@
+# Core numerical computing
+numpy>=1.24
+
+# Scientific computing
+scipy>=1.10
+
+# Visualization
+matplotlib>=3.7
+
+# Graph algorithms and graph data structures
+networkx>=3.1
+
+# Configuration files
+pyyaml>=6.0
