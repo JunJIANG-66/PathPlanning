@@ -1,1 +1,26 @@
+name: astar_grid
 
+type: graph_based
+
+planner:
+  algorithm: astar
+
+  heuristic: euclidean
+
+  allow_diagonal: true
+
+  diagonal_cost: 1.41421356
+
+environment:
+  map_type: occupancy_grid
+
+constraints:
+  allow_unknown: false
+
+objective:
+  path_length_weight: 1.0
+  obstacle_cost_weight: 0.0
+
+runtime:
+  max_time: 5.0
+  max_iterations: 100000
