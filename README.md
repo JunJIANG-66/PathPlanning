@@ -131,13 +131,63 @@ path-planning/
 │   │   │   ├── warehouse/
 │   │   │   ├── indoor/
 │   │   │   └── pedestrian/
-│   │
+│   │   │
 │   │   └── time_dependent/
-│   │       ├── temporal_obstacle/
-│   │       ├── time_varying_cost/
-│   │       └── predicted_trajectory/
+│   │        │
+│   │        ├── temporal_obstacle/
+│   │        │   ├── temporal_01/
+│   │        │   │   ├── metadata.yaml
+│   │        │   │   ├── base_map.npy
+│   │        │   │   └── temporal_rules.yaml
+│   │        │   │
+│   │        │   └── temporal_02/
+│   │        │       ├── metadata.yaml
+│   │        │       ├── base_map.npy
+│   │        │       └── temporal_rules.yaml
+│   │        │
+│   │        ├── time_varying_cost/
+│   │        │   ├── cost_01/
+│   │        │   │   ├── metadata.yaml
+│   │        │   │   └── cost_map.npy
+│   │        │   │
+│   │        │   └── cost_02/
+│   │        │       ├── metadata.yaml
+│   │        │       └── cost_map.npy
+│   │        │
+│   │        └── predicted_trajectory/
+│   │            ├── prediction_01/
+│   │            │   ├── metadata.yaml
+│   │            │   └── trajectories.npy
+│   │            │
+│   │            └── prediction_02/
+│   │                ├── metadata.yaml
+│   │                └── trajectories.npy
 │   │
 │   ├── scenarios/
+│   │    │
+│   │    ├── static/
+│   │    │   ├── easy/
+│   │    │   │   ├── scenario_001.yaml
+│   │    │   │   ├── scenario_002.yaml
+│   │    │   │   └── scenario_003.yaml
+│   │    │   │
+│   │    │   ├── medium/
+│   │    │   │   ├── scenario_001.yaml
+│   │    │   │   └── scenario_002.yaml
+│   │    │   │
+│   │    │   └── hard/
+│   │    │       ├── scenario_001.yaml
+│   │    │       └── scenario_002.yaml
+│   │    │
+│   │    ├── dynamic/
+│   │    │   ├── easy/
+│   │    │   ├── medium/
+│   │    │   └── hard/
+│   │    │
+│   │    └── temporal/
+│   │        ├── easy/
+│   │        ├── medium/
+│   │        └── hard/
 │   └── datasets/
 │
 ├── src/
