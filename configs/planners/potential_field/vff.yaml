@@ -1,1 +1,39 @@
+name: vff
+type: potential_field
+
+planner:
+  algorithm: vff
+
+  attractive_gain: 1.0
+  repulsive_gain: 1.0
+  obstacle_influence_radius: 2.0
+
+  histogram:
+    cell_size: 0.1
+    window_size: 5.0
+
+  step_size: 0.1
+  goal_tolerance: 0.2
+  max_steps: 10000
+
+environment:
+  map_type: occupancy_grid
+
+robot:
+  model: point
+  radius: 0.25
+
+constraints:
+  collision_check: true
+
+runtime:
+  max_time: 5.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
 
