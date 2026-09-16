@@ -1,1 +1,66 @@
+name: astar_dwa
+type: hybrid
+
+planner:
+  algorithm: astar_dwa
+
+  global_planner:
+    type: astar
+
+    heuristic: octile
+    connectivity: 8
+
+  local_planner:
+    type: dwa
+
+    control_frequency: 10.0
+    prediction_horizon: 2.0
+
+    velocity_window:
+      min_linear: 0.0
+      max_linear: 1.0
+      min_angular: -1.0
+      max_angular: 1.0
+
+    acceleration:
+      linear: 0.5
+      angular: 1.0
+
+    sampling:
+      linear: 10
+      angular: 20
+
+    objective:
+      heading_weight: 1.0
+      clearance_weight: 1.0
+      velocity_weight: 0.5
+
+  coordination:
+    waypoint_tolerance: 0.5
+    replan_global: true
+    replan_frequency: 2.0
+
+environment:
+  map_type: dynamic_cost_map
+  update_frequency: 10.0
+
+robot:
+  model: differential_drive
+  radius: 0.25
+
+constraints:
+  collision_check: true
+  max_velocity: 1.0
+  max_acceleration: 0.5
+
+runtime:
+  max_time: 10.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_trajectory: true
+  return_statistics: true
 
