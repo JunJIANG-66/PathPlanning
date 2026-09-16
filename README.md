@@ -119,12 +119,38 @@ path-planning/
 │   ├── maps/
 │   │   │
 │   │   ├── static/
+│   │   │   │
 │   │   │   ├── empty/
+│   │   │   │   ├── empty_20x20.yaml
+│   │   │   │   └── empty_50x50.yaml
+│   │   │   │   
 │   │   │   ├── random/
+│   │   │   │   ├── random_01.yaml
+│   │   │   │   ├── random_02.yaml
+│   │   │   │   ├── random_03.yaml
+│   │   │   │   ├── random_04.yaml
+│   │   │   │   └── random_05.yaml
+│   │   │   │
 │   │   │   ├── maze/
+│   │   │   │   ├── maze_01.yaml
+│   │   │   │   ├── maze_02.yaml
+│   │   │   │   └── maze_03.yaml
+│   │   │
 │   │   │   ├── warehouse/
+│   │   │   │   ├── warehouse_01.yaml
+│   │   │   │   ├── warehouse_02.yaml
+│   │   │   │   └── warehouse_03.yaml
+│   │   │   │
 │   │   │   ├── indoor/
+│   │   │   │   ├── office_01.yaml
+│   │   │   │   ├── office_02.yaml
+│   │   │   │   └── apartment_01.yaml
+│   │   │   │
 │   │   │   └── outdoor/
+│   │   │       ├── outdoor_01.yaml
+│   │   │       ├── outdoor_02.yaml
+│   │   │       └── outdoor_03.yaml
+
 │   │
 │   │   ├── dynamic/
 │   │   │   ├── simple/
