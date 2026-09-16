@@ -1,1 +1,47 @@
+name: mpc
+type: trajectory_based
+
+planner:
+  algorithm: mpc
+
+  horizon:
+    steps: 20
+    dt: 0.1
+
+  solver:
+    type: quadratic_programming
+    max_iterations: 100
+    tolerance: 1.0e-4
+
+  objective:
+    state_weight: 1.0
+    control_weight: 0.1
+    terminal_weight: 1.0
+    obstacle_weight: 1.0
+
+  obstacle:
+    safety_margin: 0.2
+
+environment:
+  map_type: dynamic_cost_map
+  update_frequency: 10.0
+
+robot:
+  model: differential_drive
+
+constraints:
+  max_velocity: 1.0
+  max_acceleration: 0.5
+  max_angular_velocity: 1.0
+
+runtime:
+  max_time: 5.0
+
+random:
+  seed: 42
+
+output:
+  return_trajectory: true
+  return_controls: true
+  return_statistics: true
 
