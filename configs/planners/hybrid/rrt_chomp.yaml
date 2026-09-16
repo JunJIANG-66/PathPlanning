@@ -1,1 +1,55 @@
+name: rrt_chomp
+type: hybrid
+
+planner:
+  algorithm: rrt_chomp
+
+  global_planner:
+    type: rrt_star
+
+    step_size: 0.5
+    goal_bias: 0.05
+    max_iterations: 10000
+
+    neighborhood:
+      type: radius
+      radius: adaptive
+      gamma: 2.0
+
+  local_optimizer:
+    type: chomp
+
+    iterations: 100
+
+    optimizer:
+      type: gradient_descent
+      learning_rate: 0.01
+
+    objective:
+      smoothness_weight: 1.0
+      obstacle_weight: 1.0
+
+    obstacle:
+      safety_margin: 0.2
+
+environment:
+  map_type: cost_map
+
+robot:
+  model: point
+  radius: 0.25
+
+constraints:
+  collision_check: true
+
+runtime:
+  max_time: 30.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
 
