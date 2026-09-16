@@ -132,26 +132,39 @@ path-planning/
 │   │   │   │   └── random_05.yaml
 │   │   │   │
 │   │   │   ├── maze/
-│   │   │   │   ├── maze_01.yaml
-│   │   │   │   ├── maze_02.yaml
-│   │   │   │   └── maze_03.yaml
+│   │   │   │   ├── maze_01/
+│   │   │   │   │   ├── metadata.yaml
+│   │   │   │   │   └── occupancy_grid.npy
+│   │   │   │   └── maze_02/
+│   │   │   │       ├── metadata.yaml
+│   │   │   │       └── occupancy_grid.npy
 │   │   │   │
 │   │   │   ├── warehouse/
-│   │   │   │   ├── warehouse_01.yaml
-│   │   │   │   ├── warehouse_02.yaml
-│   │   │   │   └── warehouse_03.yaml
+│   │   │   │   ├── warehouse_01/
+│   │   │   │   │   ├── metadata.yaml
+│   │   │   │   │   └── occupancy_grid.npy
+│   │   │   │   │
+│   │   │   │   ├── warehouse_02/
+│   │   │   │   │   ├── metadata.yaml
+│   │   │   │   │   └── occupancy_grid.npy
+│   │   │   │   │
+│   │   │   │   └── warehouse_03/
+│   │   │   │       ├── metadata.yaml
+│   │   │   │       └── occupancy_grid.npy
 │   │   │   │
 │   │   │   ├── indoor/
-│   │   │   │   ├── office_01.yaml
-│   │   │   │   ├── office_02.yaml
-│   │   │   │   └── apartment_01.yaml
+│   │   │   │   ├── office_01/
+│   │   │   │   │   ├── metadata.yaml
+│   │   │   │   │   └── occupancy_grid.npy
+│   │   │   │   └── office_02/
+│   │   │   │       ├── metadata.yaml
+│   │   │   │       └── occupancy_grid.npy
 │   │   │   │
 │   │   │   └── outdoor/
 │   │   │       ├── outdoor_01.yaml
 │   │   │       ├── outdoor_02.yaml
 │   │   │       └── outdoor_03.yaml
-
-│   │
+│   │   │
 │   │   ├── dynamic/
 │   │   │   ├── simple/
 │   │   │   ├── warehouse/
