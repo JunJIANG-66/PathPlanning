@@ -1,1 +1,40 @@
+name: apf
+type: potential_field
+
+planner:
+  algorithm: apf
+
+  attractive:
+    gain: 1.0
+    exponent: 1.0
+
+  repulsive:
+    gain: 1.0
+    influence_radius: 2.0
+    exponent: 2.0
+
+  step_size: 0.1
+  goal_tolerance: 0.2
+  max_steps: 10000
+
+environment:
+  map_type: occupancy_grid
+
+robot:
+  model: point
+  radius: 0.25
+
+constraints:
+  collision_check: true
+
+runtime:
+  max_time: 5.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
 
