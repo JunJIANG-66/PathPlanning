@@ -1,1 +1,33 @@
+name: dstar
+type: graph_based
+
+planner:
+  algorithm: dstar
+  heuristic: euclidean
+  connectivity: 8
+  replanning: true
+
+environment:
+  map_type: dynamic_cost_map
+  update_frequency: 10.0
+
+cost:
+  edge_cost: map_cost
+
+constraints:
+  allow_unknown: false
+
+runtime:
+  max_time: 5.0
+  max_iterations: 100000
+  max_replans: 100
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
+  return_search_tree: false
 
