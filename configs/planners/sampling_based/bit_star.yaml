@@ -1,1 +1,44 @@
+name: bit_star
+type: sampling_based
+
+planner:
+  algorithm: bit_star
+
+  batch_size: 500
+  max_batches: 40
+
+  sampler: informed
+  pruning: true
+  rewiring: true
+
+  heuristic: euclidean
+
+  local_planner:
+    type: straight_line
+    resolution: 0.05
+
+cost:
+  edge_cost: distance
+
+environment:
+  map_type: occupancy_grid
+
+robot:
+  model: point
+  radius: 0.25
+
+constraints:
+  collision_check: true
+
+runtime:
+  max_time: 30.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
+  return_graph: true
 
