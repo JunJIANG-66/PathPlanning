@@ -135,7 +135,7 @@ path-planning/
 │   │   │   │   ├── maze_01.yaml
 │   │   │   │   ├── maze_02.yaml
 │   │   │   │   └── maze_03.yaml
-│   │   │
+│   │   │   │
 │   │   │   ├── warehouse/
 │   │   │   │   ├── warehouse_01.yaml
 │   │   │   │   ├── warehouse_02.yaml
