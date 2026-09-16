@@ -1,1 +1,20 @@
+name: dijkstra_grid
 
+type: graph_based
+
+planner:
+  algorithm: dijkstra
+
+  allow_diagonal: true
+
+  diagonal_cost: 1.41421356
+
+environment:
+  map_type: occupancy_grid
+
+objective:
+  path_length_weight: 1.0
+  obstacle_cost_weight: 0.0
+
+runtime:
+  max_time: 5.0
