@@ -85,7 +85,7 @@ all = [
 Homepage = "https://github.com/JunJIANG-66/PathPlanning/tree/main"
 Repository = "https://github.com/JunJIANG-66/PathPlanning/tree/main"
 Documentation = "https://github.com/JunJIANG-66/PathPlanning/tree/main"
-<!-- Issues = "https://github.com/YOUR_USERNAME/path-planning/issues" -->
+# Issues = "https://github.com/YOUR_USERNAME/path-planning/issues"
 
 
 [tool.setuptools]
