@@ -1,1 +1,40 @@
+name: vfh
+type: potential_field
+
+planner:
+  algorithm: vfh
+
+  histogram:
+    angular_resolution: 5.0
+    sector_count: 72
+    threshold_low: 1.0
+    threshold_high: 5.0
+
+  robot_radius: 0.25
+  safety_distance: 0.2
+
+  heading_weight: 1.0
+  clearance_weight: 1.0
+  velocity_weight: 0.5
+
+environment:
+  map_type: occupancy_grid
+
+robot:
+  model: differential_drive
+  radius: 0.25
+
+constraints:
+  collision_check: true
+
+runtime:
+  max_time: 5.0
+
+random:
+  seed: 42
+
+output:
+  return_path: true
+  return_cost: true
+  return_statistics: true
 
