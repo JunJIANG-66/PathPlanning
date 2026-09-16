@@ -220,13 +220,31 @@ path-planning/
 │   │    │
 │   │    ├── dynamic/
 │   │    │   ├── easy/
+│   │    │   │   ├── scenario_001.yaml
+│   │    │   │   ├── scenario_002.yaml
+│   │    │   │   └── scenario_003.yaml
+│   │    │   │
 │   │    │   ├── medium/
+│   │    │   │   ├── scenario_001.yaml
+│   │    │   │   └── scenario_002.yaml
+│   │    │   │
 │   │    │   └── hard/
+│   │    │       ├── scenario_001.yaml
+│   │    │       └── scenario_002.yaml
 │   │    │
 │   │    └── temporal/
 │   │        ├── easy/
+│   │        │   ├── scenario_001.yaml
+│   │        │   ├── scenario_002.yaml
+│   │        │   └── scenario_003.yaml
+│   │        │
 │   │        ├── medium/
+│   │        │   ├── scenario_001.yaml
+│   │        │   └── scenario_002.yaml
+│   │        │
 │   │        └── hard/
+│   │            ├── scenario_001.yaml
+│   │            └── scenario_002.yaml
 │   └── datasets/
 │
 ├── src/
