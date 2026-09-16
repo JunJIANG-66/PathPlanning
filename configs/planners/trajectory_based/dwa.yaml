@@ -1,1 +1,48 @@
+name: dwa
+type: trajectory_based
+
+planner:
+  algorithm: dwa
+
+  control_frequency: 10.0
+  prediction_horizon: 2.0
+
+  velocity_window:
+    min_linear: 0.0
+    max_linear: 1.0
+    min_angular: -1.0
+    max_angular: 1.0
+
+  acceleration:
+    linear: 0.5
+    angular: 1.0
+
+  sampling:
+    linear: 10
+    angular: 20
+
+  objective:
+    heading_weight: 1.0
+    clearance_weight: 1.0
+    velocity_weight: 0.5
+
+environment:
+  map_type: occupancy_grid
+
+robot:
+  model: differential_drive
+  radius: 0.25
+
+constraints:
+  collision_check: true
+
+runtime:
+  max_time: 5.0
+
+random:
+  seed: 42
+
+output:
+  return_trajectory: true
+  return_statistics: true
 
